@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Home" android:icon="@drawable/ic_home_black_24dp" android:id="@+id/home_screen"/>
-    <item android:title="About" android:icon="@drawable/ic_info_black_24dp" android:id="@+id/about_screen"/>
+    <item
+            android:title="Home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:id="@+id/home_screen"/>
+    <item
+            android:title="About"
+            android:icon="@drawable/ic_info_black_24dp"
+            android:id="@+id/about_screen"/>
 </menu>

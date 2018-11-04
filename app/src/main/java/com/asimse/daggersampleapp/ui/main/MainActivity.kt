@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : DaggerAppCompatActivity() {
 
-    lateinit var navController:NavController
+   private lateinit var navController:NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +26,7 @@ class MainActivity : DaggerAppCompatActivity() {
 
         navController = findNavController(R.id.navHostMain)
 
-        //ActionBar
+        //ToolBar
         NavigationUI.setupActionBarWithNavController(this, navController)
 
         //BottomNavBar
@@ -34,7 +34,7 @@ class MainActivity : DaggerAppCompatActivity() {
 
     }
 
-    override fun onNavigateUp(): Boolean {
+    override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp()
     }
 }
