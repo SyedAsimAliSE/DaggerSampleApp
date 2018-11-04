@@ -1,6 +1,6 @@
 package com.asimse.daggersampleapp.di.module
 
-import com.asimse.daggersampleapp.ui.MainActivity
+import com.asimse.daggersampleapp.ui.main.MainActivity
 import com.asimse.daggersampleapp.di.scope.ActivityScoped
 import com.asimse.daggersampleapp.ui.main.MainModule
 import dagger.Module

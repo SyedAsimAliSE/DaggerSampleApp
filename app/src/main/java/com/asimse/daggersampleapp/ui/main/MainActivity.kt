@@ -1,4 +1,4 @@
-package com.asimse.daggersampleapp.ui
+package com.asimse.daggersampleapp.ui.main
 
 import android.os.Bundle
 import com.asimse.daggersampleapp.R
