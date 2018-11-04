@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/mobile_navigation">
+            xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/mobile_navigation"
+            app:startDestination="@id/home_screen">
 
+    <fragment android:id="@+id/home_screen" android:name="com.asimse.daggersampleapp.ui.home.HomeFragment"
+              android:label="Home" tools:layout="@layout/home_fragment"/>
+    <fragment android:id="@+id/about_screen" android:name="com.asimse.daggersampleapp.ui.about.AboutFragment"
+              android:label="about_fragment" tools:layout="@layout/about_fragment"/>
 </navigation>

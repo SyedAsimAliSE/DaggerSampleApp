@@ -17,6 +17,7 @@ buildscript {
         SUPPORT_LIBRARY_VERSION     = '1.0.0'
         CONSTRAINT_LAYOUT_VERSION   = '2.0.0-alpha2'
         NAVIGATION_VERSION          = '1.0.0-alpha07'
+        LIFE_CYCLE_VERSION          = '2.0.0'
 
         //DI
         DAGGER_VERSION              = '2.19'

@@ -35,9 +35,6 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     //Testing
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0-beta01'
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0-beta01'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
@@ -45,6 +42,11 @@ dependencies {
     //App Dependencies
     implementation "androidx.constraintlayout:constraintlayout:$rootProject.CONSTRAINT_LAYOUT_VERSION"
     implementation "androidx.appcompat:appcompat:$rootProject.SUPPORT_LIBRARY_VERSION"
+    implementation "androidx.legacy:legacy-support-v4:$rootProject.SUPPORT_LIBRARY_VERSION"
+
+    //LifeCycle
+    implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.LIFE_CYCLE_VERSION"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$rootProject.LIFE_CYCLE_VERSION"
 
     //Navigation
     implementation "android.arch.navigation:navigation-fragment-ktx:$rootProject.NAVIGATION_VERSION"
@@ -62,5 +64,6 @@ dependencies {
     implementation "com.google.dagger:dagger-android-support:$rootProject.DAGGER_VERSION"
     kapt "com.google.dagger:dagger-compiler:$rootProject.DAGGER_VERSION"
     kapt "com.google.dagger:dagger-android-processor:$rootProject.DAGGER_VERSION"
+    implementation 'com.google.android.material:material:1.0.0'
 
 }
