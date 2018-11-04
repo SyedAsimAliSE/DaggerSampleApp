@@ -1,17 +1,41 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    ext.kotlin_version = '1.3.0'
+
+    ext {
+        //SDK & TOOLS
+        COMPILE_SDK_VERSION  = 28
+        MIN_SDK_VERSION      = 21
+        TARGET_SDK_VERSION   = 28
+
+        //Gradle & Kotlin
+        GRADLE_VERSION              = '3.4.0-alpha02'
+        KOTLIN_VERSION              = '1.3.0'
+        KTX_VERSION                 = '1.0.0'
+
+        //ANDROID LIBS
+        SUPPORT_LIBRARY_VERSION     = '1.0.0'
+        CONSTRAINT_LAYOUT_VERSION   = '2.0.0-alpha2'
+        NAVIGATION_VERSION          = '1.0.0-alpha07'
+
+        //DI
+        DAGGER_VERSION              = '2.19'
+    }
+
     repositories {
         google()
         jcenter()
-        
+
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.3.0-beta02'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+        classpath "com.android.tools.build:gradle:$GRADLE_VERSION"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$KOTLIN_VERSION"
+
+        //Temporary fix for Dagger > 2.16  --> Followup -> https://issuetracker.google.com/issues/115738511
+        classpath 'com.android.tools.build.jetifier:jetifier-processor:1.0.0-beta02'
+
+        classpath "android.arch.navigation:navigation-safe-args-gradle-plugin:$NAVIGATION_VERSION"
+
     }
 }
 
@@ -19,7 +43,7 @@ allprojects {
     repositories {
         google()
         jcenter()
-        
+
     }
 }
 

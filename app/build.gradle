@@ -1,38 +1,63 @@
 apply plugin: 'com.android.application'
 
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'androidx.navigation.safeargs'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion rootProject.COMPILE_SDK_VERSION
+
     defaultConfig {
         applicationId "com.asimse.daggersampleapp"
-        minSdkVersion 21
-        targetSdkVersion 28
+        minSdkVersion rootProject.MIN_SDK_VERSION
+        targetSdkVersion rootProject.TARGET_SDK_VERSION
         versionCode 1
-        versionName "1.0"
+        versionName "0.0.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.0.0'
-    implementation 'android.arch.navigation:navigation-fragment:1.0.0-alpha07'
-    implementation 'android.arch.navigation:navigation-ui:1.0.0-alpha07'
-    implementation 'android.arch.navigation:navigation-fragment-ktx:1.0.0-alpha07'
-    implementation 'android.arch.navigation:navigation-ui-ktx:1.0.0-alpha07'
-    implementation 'androidx.core:core-ktx:1.0.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+    //Testing
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+
+    //App Dependencies
+    implementation "androidx.constraintlayout:constraintlayout:$rootProject.CONSTRAINT_LAYOUT_VERSION"
+    implementation "androidx.appcompat:appcompat:$rootProject.SUPPORT_LIBRARY_VERSION"
+
+    //Navigation
+    implementation "android.arch.navigation:navigation-fragment-ktx:$rootProject.NAVIGATION_VERSION"
+    implementation "android.arch.navigation:navigation-ui-ktx:$rootProject.NAVIGATION_VERSION"
+    implementation "android.arch.navigation:navigation-fragment:$rootProject.NAVIGATION_VERSION"
+    implementation "android.arch.navigation:navigation-ui:$rootProject.NAVIGATION_VERSION"
+
+    //Kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$rootProject.KOTLIN_VERSION"
+    implementation "androidx.core:core-ktx:$rootProject.KTX_VERSION"
+
+    // Dagger2
+    implementation "com.google.dagger:dagger:$rootProject.DAGGER_VERSION"
+    implementation "com.google.dagger:dagger-android:$rootProject.DAGGER_VERSION"
+    implementation "com.google.dagger:dagger-android-support:$rootProject.DAGGER_VERSION"
+    kapt "com.google.dagger:dagger-compiler:$rootProject.DAGGER_VERSION"
+    kapt "com.google.dagger:dagger-android-processor:$rootProject.DAGGER_VERSION"
+
 }
