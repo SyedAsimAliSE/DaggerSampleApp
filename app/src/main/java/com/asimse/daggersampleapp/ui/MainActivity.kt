@@ -1,6 +1,7 @@
-package com.asimse.daggersampleapp
+package com.asimse.daggersampleapp.ui
 
 import android.os.Bundle
+import com.asimse.daggersampleapp.R
 import dagger.android.support.DaggerAppCompatActivity
 
 
