@@ -10,6 +10,10 @@ import com.asimse.daggersampleapp.R
 import dagger.android.support.DaggerFragment
 import javax.inject.Inject
 
+/**
+ * Created by Syed Asim Ali on 04-Nov-18.
+ */
+
 class AboutFragment : DaggerFragment() {
 
     @Inject

@@ -8,10 +8,13 @@ import com.asimse.daggersampleapp.R
 import dagger.android.support.DaggerAppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
+/**
+ * Created by Syed Asim Ali on 04-Nov-18.
+ */
 
 class MainActivity : DaggerAppCompatActivity() {
 
-   private lateinit var navController:NavController
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,7 +23,7 @@ class MainActivity : DaggerAppCompatActivity() {
         setupNavigation()
     }
 
-    private fun setupNavigation(){
+    private fun setupNavigation() {
 
         setSupportActionBar(toolbar)
 
