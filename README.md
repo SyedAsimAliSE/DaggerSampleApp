@@ -2,7 +2,7 @@
 
 <img src="https://user-images.githubusercontent.com/44644354/47969132-ed8ca800-e094-11e8-8bee-041de4146364.png" title="Dagger2" alt="Dagger2" width=100 height=100>
 
-> An Android application with Dagger2 Android implementation using MVVM pattern along with Android AAC.
+> An Android application with Dagger2 Android implementation using MVVM pattern along with AAC.
 
 
 ![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)
@@ -11,16 +11,16 @@
 ## Info
 
 - This project is built using `Android Studio 3.3 Beta 2`
-- Minimum SDK version used in 21 target SDK version is 28
+- Minimum SDK version used in `21` target SDK version is `28`
 - Project is based on Single Activity
 - It is using Navigation Components, so no manual dealing with back stack.
 - Each fragment have it's own view model injected by dagger from the view model factory
 
-### Clone
+## Clone
 
 - Clone this repo to your local machine using `https://github.com/SyedAsimAliSE/DaggerSampleApp.git`
 
-### Usage
+## Usage
 
 - Every thing related to <b>Dagger2</b> is in the <b>di</b> pacakge 
 - Every thing related to <b>UI</b> is in <b>ui</b> pacakge
@@ -39,19 +39,16 @@ Find `MainModule.kt` it's in the ui > main pacakge
 
 ## Contributing
 
-### Step 1
+#### Step 1
 
-- **Option 1**
-    - 🍴 Fork this repo!
+- 🍴 Fork this repo!
+- 👯 Clone this repo to your local machine using `https://github.com/SyedAsimAliSE/DaggerSampleApp.git`
 
-- **Option 2**
-    - 👯 Clone this repo to your local machine using `https://github.com/SyedAsimAliSE/DaggerSampleApp.git`
-
-### Step 2
+#### Step 2
 
 - **HACK AWAY!** 🔨🔨🔨
 
-### Step 3
+#### Step 3
 
 - 🔃 Create a new pull request using <a href="https://github.com/SyedAsimAliSE/DaggerSampleApp/compare/" target="_blank">`https://github.com/SyedAsimAliSE/DaggerSampleApp/compare/`</a>.
 
